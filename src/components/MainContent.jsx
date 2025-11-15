@@ -202,6 +202,11 @@ export default function MainContent() {
                   bgcolor: "background.paper",
                   boxShadow: 1,
                   "&:hover": { boxShadow: 3 },
+                  paddingY: 1,
+                  paddingX: 2,
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
                 }}
               >
                 <ListItemText
