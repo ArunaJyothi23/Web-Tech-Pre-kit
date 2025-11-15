@@ -129,7 +129,7 @@ export default function MainContent() {
       </Box>
 
       {/* Resource Cards */}
-      <Grid container spacing={4} sx={{ mb: 6 }}>
+      <Grid container spacing={3} sx={{ mb: 6 }}>
         {Object.entries(topic.links).map(([type, url]) => {
           if (type === "tutorial") return null;
           const { label, icon, color } = linkConfig[type];
@@ -139,11 +139,12 @@ export default function MainContent() {
             <Grid item xs={12} sm={6} md={4} key={type}>
               <Card
                 sx={{
-                  height: "100%",
                   display: "flex",
                   flexDirection: "column",
                   borderRadius: 3,
                   boxShadow: 2,
+                  height: "100%",
+                  minHeight: 320, // Ensure cards have a minimum height
                   transition: "0.3s",
                   "&:hover": {
                     transform: "translateY(-6px)",
@@ -177,7 +178,7 @@ export default function MainContent() {
                     sx={{
                       textTransform: "none",
                       fontWeight: 600,
-                      py: 1.5, // Improved padding
+                      py: 1.5, // Padding improvement
                     }}
                   >
                     Open
@@ -228,7 +229,7 @@ export default function MainContent() {
                   sx={{
                     borderRadius: 2,
                     textTransform: "none",
-                    py: 1, // Improved padding for video buttons
+                    py: 1, // Padding for video button
                     px: 3,
                   }}
                 >
