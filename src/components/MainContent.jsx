@@ -143,6 +143,7 @@ export default function MainContent() {
                   display: "flex",
                   flexDirection: "column",
                   borderRadius: 3,
+                  boxShadow: 2,
                   transition: "0.3s",
                   "&:hover": {
                     transform: "translateY(-6px)",
@@ -173,7 +174,11 @@ export default function MainContent() {
                     href={url}
                     target="_blank"
                     rel="noopener"
-                    sx={{ textTransform: "none", fontWeight: 600 }}
+                    sx={{
+                      textTransform: "none",
+                      fontWeight: 600,
+                      py: 1.5, // Improved padding
+                    }}
                   >
                     Open
                   </Button>
@@ -220,7 +225,12 @@ export default function MainContent() {
                   href={video}
                   target="_blank"
                   rel="noopener"
-                  sx={{ borderRadius: 2, textTransform: "none" }}
+                  sx={{
+                    borderRadius: 2,
+                    textTransform: "none",
+                    py: 1, // Improved padding for video buttons
+                    px: 3,
+                  }}
                 >
                   Watch
                 </Button>
